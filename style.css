@@ -1,0 +1,491 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+}
+.Main{
+    background-color:#277a85;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/* Main Body */
+.first{
+    height:20%;
+    width: 100%;
+}
+.top-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20%;
+}
+
+/* First Div, Uper Picture */
+
+.second{
+    width: 100%;
+    background-color: rgb(218, 233, 236);
+    padding-bottom: 50px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    width: 700px;
+    height: 5%;
+    margin: 0 auto;
+}
+.search input[type="text"] {
+    flex: 3;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 10px;
+}
+
+#container {
+    margin-top: 120px;
+}
+
+.delete-button {
+    display:block ;
+    background-color: rgb(21, 171, 174);
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 1%;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #bc2424;
+  }
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+}   
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+}
+
+.company {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    height: 5%;
+    color: rgb(21, 171, 174); /* Set the text color to blue */
+}
+
+.company-details{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.position {
+    font-size: 16px;
+    height: 40%;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .position:hover {
+    color: rgb(21, 171, 174); 
+  }
+
+.details {
+    flex-grow: 1;
+    margin-right: 2px;
+}
+
+.info span {
+    margin-right: 8px;
+}
+
+.languages {
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .languages p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    color: rgb(21, 171, 174);
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .languages p:hover {
+    background-color: rgb(218, 233, 236);
+  }
+  
+  .languages p::before {
+    content: '';
+    position: absolute;
+    border: 1px solid #ccc;
+    pointer-events: painted;
+}
+
+.attribution {
+    font-size: 14px;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.attribution a 
+{
+    color: hsl(228, 45%, 44%); 
+    font-size: 14px; text-align: center; 
+}
+
+
+
+/* Pop Up CSS */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 150%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.popup .company,
+.popup .position,
+.popup .postedAt,
+.popup .contract,
+.popup .location,
+.popup .role,
+.popup .level {
+    padding-bottom: 10px; /* Add padding between the text elements */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Rest of your CSS styles... */
+  
+  .add-job-form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .add-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Popup container */
+.popup-container {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  /* Popup */
+  .popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    color: #0a0000;
+    cursor: pointer;
+  }
+  
+  /* Form */
+  .job-form {
+    margin-top: 20px;
+  }
+  
+  .input-field {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .uploaded-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 16px;
+  }
+
+/* Media Query */
+  @media screen and (max-width: 400px) {
+    .Main {
+        background-color: #277a85;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      
+
+      .first {
+        height: 20%;
+        width: 100%;
+      }
+      
+      .top-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 20%;
+      }
+      
+      /* First Div, Upper Picture */
+      
+      .second {
+        width: 100%;
+        background-color: rgb(218, 233, 236);
+      }
+      
+      .search {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 5%;
+        margin: 0 auto;
+      }
+      
+      .search input[type="text"] {
+        padding: 15px;
+        width: 50%;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 10px;
+      }
+      
+      #container {
+        margin-top: 120px;
+      }
+      
+      .delete-button {
+        display: block;
+        background-color: rgb(21, 171, 174);
+        color: #ffffff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        height: 1%;
+        margin: 0 auto;
+        transition: background-color 0.3s ease;
+      }
+      
+      .delete-button:hover {
+        background-color: #bc2424;
+      }
+      
+      .card {
+        display: flex;
+        flex-direction: column  ;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 80%;
+      }
+      
+      .logo {
+        width: 15%;
+        height: 50px;
+        margin-right: 70%;
+        margin-bottom: 20px; /* Add this line to position the logo at the top */
+      }
+
+      .uploaded-image {
+        width: 15%;
+        height: 50px;
+        margin-right: 70%;
+        margin-bottom: 20px;
+      }
+    
+      .company {
+        width:10%;
+        font-size: 16px;
+        font-weight: bold;
+        height: 5%;
+        color: rgb(21, 171, 174);
+      }
+      
+      .company-details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        cursor: pointer;
+      }
+      
+      .position {
+        font-size: 16px;
+        height: 40%;
+        font-weight: bold;
+        margin-top: 2px;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+      
+      .position:hover {
+        color: rgb(21, 171, 174);
+      }
+      
+      .details {
+        flex-grow: 1;
+        margin-right: 2px;
+      }
+      
+      .info span {
+        margin-right: 8px;
+      }
+      
+      .languages {
+        
+        display: flex;
+        margin-top: 10px;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        flex: 1;
+      }
+      
+      .languages p {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        position: relative;
+        color: rgb(21, 171, 174);
+        padding: 5px;
+        cursor: pointer;
+      }
+      
+      .languages p:hover {
+        background-color: rgb(218, 233, 236);
+      }
+      
+      .languages p::before {
+        content: '';
+        position: absolute;
+        border: 1px solid #ccc;
+        pointer-events: painted;
+      }
+      
+      .attribution {
+        font-size: 14px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        font-size: 14px;
+        text-align: center;
+      }
+      
+      /* Pop Up CSS */
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        max-width: 50%;
+        max-height: 70%;
+        overflow: auto;
+      }
+
+      
+    
+}
